@@ -44,12 +44,12 @@
 
 - 在cell中
 ```
-/**
+
     LNCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LNCell"];
     cell.textField.LN_MoveView = tableView;
     cell.textField.LN_KeyBoardDistance = 30;
     return cell;
-/**
+```
 
 
 
