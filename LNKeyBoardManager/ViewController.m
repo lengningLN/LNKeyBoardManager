@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
-
+#import "LNKeyBoardSender.h"
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *upField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextField *downField;
 
 @end
 
@@ -16,13 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+ 
+    self.upField.LN_MoveView = self.view;
+    self.upField.LN_KeyBoardDistance = 50;
+    
+    self.downField.LN_MoveView = self.view;
+    self.downField.LN_KeyBoardDistance = 15;
+    
+    self.textView.LN_MoveView = self.view;
+    self.textView.LN_KeyBoardDistance = 30;
 }
 
 

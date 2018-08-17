@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LNCell" id="KGk-i7-Jjw" customClass="LNCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGO-sR-ZzF">
+                        <rect key="frame" x="10" y="5" width="33" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n55-AR-7UN">
+                        <rect key="frame" x="53" y="5" width="252" height="33.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="n55-AR-7UN" secondAttribute="trailing" constant="15" id="0hN-ou-EEt"/>
+                    <constraint firstItem="n55-AR-7UN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="4z1-XT-aA0"/>
+                    <constraint firstAttribute="bottom" secondItem="n55-AR-7UN" secondAttribute="bottom" constant="5" id="EzY-mc-Ih3"/>
+                    <constraint firstItem="YGO-sR-ZzF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="S8S-bY-GOu"/>
+                    <constraint firstItem="YGO-sR-ZzF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="U4t-cH-rau"/>
+                    <constraint firstAttribute="bottom" secondItem="YGO-sR-ZzF" secondAttribute="bottom" constant="5" id="eWs-fd-4cn"/>
+                    <constraint firstItem="n55-AR-7UN" firstAttribute="leading" secondItem="YGO-sR-ZzF" secondAttribute="trailing" constant="10" id="vSP-m5-j5c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="leftL" destination="YGO-sR-ZzF" id="9h3-RX-9Rn"/>
+                <outlet property="textField" destination="n55-AR-7UN" id="7e6-gG-ZKh"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

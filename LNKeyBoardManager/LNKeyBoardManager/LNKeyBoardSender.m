@@ -43,12 +43,15 @@
 
 @implementation UITextView (LNKeyBoardSender)
 
-+ (void)load
+
++ (void)initialize
 {
-    // 拦截成为第一响应者方法
-    Method sm = class_getInstanceMethod(self, @selector(canBecomeFirstResponder));
-    Method mm = class_getInstanceMethod(self, @selector(LN_canBecomeFirstResponder));
-    method_exchangeImplementations(sm, mm);
+    static dispatch_once_t onceTocken;
+    dispatch_once(&onceTocken, ^{
+        Method sm = class_getInstanceMethod(self, @selector(canBecomeFirstResponder));
+        Method mm = class_getInstanceMethod(self, @selector(LN_canBecomeFirstResponder));
+        method_exchangeImplementations(sm, mm);
+    });
 }
 
 - (BOOL)LN_canBecomeFirstResponder
