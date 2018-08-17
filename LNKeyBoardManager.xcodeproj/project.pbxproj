@@ -13,6 +13,9 @@
 		C7AD47C9212697DA00B5D4E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7AD47C8212697DA00B5D4E6 /* Assets.xcassets */; };
 		C7AD47CC212697DA00B5D4E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AD47CA212697DA00B5D4E6 /* LaunchScreen.storyboard */; };
 		C7AD47CF212697DA00B5D4E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AD47CE212697DA00B5D4E6 /* main.m */; };
+		C7AD47DC212699A100B5D4E6 /* LNKeyBoardResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AD47D9212699A100B5D4E6 /* LNKeyBoardResponder.m */; };
+		C7AD47DD212699A100B5D4E6 /* LNKeyBoardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AD47DA212699A100B5D4E6 /* LNKeyBoardManager.m */; };
+		C7AD47DE212699A100B5D4E6 /* LNKeyBoardSender.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AD47DB212699A100B5D4E6 /* LNKeyBoardSender.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		C7AD47CB212697DA00B5D4E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7AD47CD212697DA00B5D4E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7AD47CE212697DA00B5D4E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7AD47D6212699A100B5D4E6 /* LNKeyBoardResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNKeyBoardResponder.h; sourceTree = "<group>"; };
+		C7AD47D7212699A100B5D4E6 /* LNKeyBoardSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNKeyBoardSender.h; sourceTree = "<group>"; };
+		C7AD47D8212699A100B5D4E6 /* LNKeyBoardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNKeyBoardManager.h; sourceTree = "<group>"; };
+		C7AD47D9212699A100B5D4E6 /* LNKeyBoardResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNKeyBoardResponder.m; sourceTree = "<group>"; };
+		C7AD47DA212699A100B5D4E6 /* LNKeyBoardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNKeyBoardManager.m; sourceTree = "<group>"; };
+		C7AD47DB212699A100B5D4E6 /* LNKeyBoardSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNKeyBoardSender.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +71,25 @@
 				C7AD47C0212697D900B5D4E6 /* AppDelegate.m */,
 				C7AD47C2212697D900B5D4E6 /* ViewController.h */,
 				C7AD47C3212697D900B5D4E6 /* ViewController.m */,
+				C7AD47D5212699A100B5D4E6 /* LNKeyBoardManager */,
 				C7AD47C5212697D900B5D4E6 /* Main.storyboard */,
 				C7AD47C8212697DA00B5D4E6 /* Assets.xcassets */,
 				C7AD47CA212697DA00B5D4E6 /* LaunchScreen.storyboard */,
 				C7AD47CD212697DA00B5D4E6 /* Info.plist */,
 				C7AD47CE212697DA00B5D4E6 /* main.m */,
+			);
+			path = LNKeyBoardManager;
+			sourceTree = "<group>";
+		};
+		C7AD47D5212699A100B5D4E6 /* LNKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				C7AD47D8212699A100B5D4E6 /* LNKeyBoardManager.h */,
+				C7AD47DA212699A100B5D4E6 /* LNKeyBoardManager.m */,
+				C7AD47D6212699A100B5D4E6 /* LNKeyBoardResponder.h */,
+				C7AD47D9212699A100B5D4E6 /* LNKeyBoardResponder.m */,
+				C7AD47D7212699A100B5D4E6 /* LNKeyBoardSender.h */,
+				C7AD47DB212699A100B5D4E6 /* LNKeyBoardSender.m */,
 			);
 			path = LNKeyBoardManager;
 			sourceTree = "<group>";
@@ -142,6 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7AD47C4212697D900B5D4E6 /* ViewController.m in Sources */,
+				C7AD47DD212699A100B5D4E6 /* LNKeyBoardManager.m in Sources */,
+				C7AD47DC212699A100B5D4E6 /* LNKeyBoardResponder.m in Sources */,
+				C7AD47DE212699A100B5D4E6 /* LNKeyBoardSender.m in Sources */,
 				C7AD47CF212697DA00B5D4E6 /* main.m in Sources */,
 				C7AD47C1212697D900B5D4E6 /* AppDelegate.m in Sources */,
 			);
