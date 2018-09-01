@@ -18,6 +18,7 @@
         return;
     }
     
+    // 添加关联对象
     objc_setAssociatedObject(self, @selector(LN_MoveView), LN_MoveView, OBJC_ASSOCIATION_ASSIGN);
     
     [self addTarget:[LNKeyBoardManager sharedManager] action:NSSelectorFromString(@"controlBeginEditing:") forControlEvents:UIControlEventEditingDidBegin];
