@@ -139,22 +139,6 @@
     //  处理键盘已经弹出的情况下切换输入框
     if (self.isKeyBoardShow && self.keyboardNotification) {
         [self keyBoardShow:self.keyboardNotification];
-//        CGRect keyBoardEndFrame = [self.keyboardNotification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-//        NSTimeInterval duration = [self.keyboardNotification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-//
-//        CGRect inputViewFrame = [control convertRect:control.bounds toView:[UIApplication sharedApplication].keyWindow];
-//
-//         CGFloat offset =  CGRectGetMaxY(inputViewFrame) - keyBoardEndFrame.origin.y  + self.responder.view.LN_KeyBoardDistance;
-//        // 如果被遮挡
-//        if (offset <= 0) {
-//            return;
-//        }
-//
-//        // 整数是往下，负数是往上
-//        [UIView animateWithDuration:duration animations:^{
-//            self.responder.view.LN_MoveView.transform = CGAffineTransformTranslate(self.responder.view.LN_MoveView.transform,0, -offset);
-//        }];
-        
     }
 }
 
