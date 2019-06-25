@@ -22,6 +22,13 @@
  */
 @property (nonatomic, strong) UITapGestureRecognizer *closeGes;
 
+
+
+/**
+ 键盘是否已经显示，默认为NO
+ */
+@property (nonatomic, assign) BOOL isKeyBoardShow;
+@property (nonatomic, strong) NSNotification *keyboardNotification;
 @end
 
 
@@ -59,7 +66,8 @@
     if (self.enable == NO || self.responder.view == nil || self.responder.inTableViewController) {
         return;
     }
-    
+    self.isKeyBoardShow = YES;
+    self.keyboardNotification = notify;
     // 获取键盘最终的位置
     CGRect keyBoardEndFrame = [notify.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     NSTimeInterval duration = [notify.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -81,7 +89,7 @@
     if (self.enable == NO || self.responder.view == nil || self.responder.inTableViewController) {
         return;
     }
-    
+    self.isKeyBoardShow = NO;
     // 恢复移动视图位置
     NSTimeInterval duration = [notify.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     [self.responder keyboardHidden:duration];
@@ -99,7 +107,7 @@
 }
 
 /**
- 开始编辑
+ 开始编辑的时候触发
  
  @param control control description
  */
@@ -113,6 +121,9 @@
     [self.closeGes.view removeGestureRecognizer:self.closeGes];
     
     // 修改当前响应者
+     if (self.isKeyBoardShow && self.keyboardNotification) {
+         control.transform = self.responder.view.transform;
+     }
     self.responder.view = control;
     
     // 添加关闭手势
@@ -123,6 +134,27 @@
         if ([control.LN_MoveView isKindOfClass:[UIView class]] && [control.LN_MoveView.gestureRecognizers containsObject:self.closeGes] == NO) {
             [control.LN_MoveView addGestureRecognizer:self.closeGes];
         }
+    }
+    
+    //  处理键盘已经弹出的情况下切换输入框
+    if (self.isKeyBoardShow && self.keyboardNotification) {
+        [self keyBoardShow:self.keyboardNotification];
+//        CGRect keyBoardEndFrame = [self.keyboardNotification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+//        NSTimeInterval duration = [self.keyboardNotification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+//
+//        CGRect inputViewFrame = [control convertRect:control.bounds toView:[UIApplication sharedApplication].keyWindow];
+//
+//         CGFloat offset =  CGRectGetMaxY(inputViewFrame) - keyBoardEndFrame.origin.y  + self.responder.view.LN_KeyBoardDistance;
+//        // 如果被遮挡
+//        if (offset <= 0) {
+//            return;
+//        }
+//
+//        // 整数是往下，负数是往上
+//        [UIView animateWithDuration:duration animations:^{
+//            self.responder.view.LN_MoveView.transform = CGAffineTransformTranslate(self.responder.view.LN_MoveView.transform,0, -offset);
+//        }];
+        
     }
 }
 

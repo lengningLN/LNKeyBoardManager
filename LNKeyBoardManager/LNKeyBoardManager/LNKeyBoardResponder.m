@@ -59,7 +59,7 @@
         }];
     }else{
         [UIView animateWithDuration:duration animations:^{
-            self.view.LN_MoveView.transform = CGAffineTransformTranslate(self.transform, 0, -(offset));
+              self.view.LN_MoveView.transform = CGAffineTransformTranslate(self.view.LN_MoveView.transform, 0, -(offset));
         }];
     }
 }

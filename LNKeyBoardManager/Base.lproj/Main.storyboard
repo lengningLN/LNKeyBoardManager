@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QRD-Av-ocr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QRD-Av-ocr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,6 +75,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="测试textField,健哥为50" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W3-ib-GVJ">
+                                <rect key="frame" x="50" y="492" width="275" height="30"/>
+                                <color key="backgroundColor" red="0.48476823492960752" green="0.75257537835281907" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oBV-OL-euO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,10 +95,13 @@
                             <constraint firstItem="m7f-pB-4iV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8jR-zz-rg7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m7f-pB-4iV" secondAttribute="trailing" constant="50" id="Gvc-fc-PxP"/>
                             <constraint firstItem="Ite-5I-sCW" firstAttribute="top" secondItem="m7f-pB-4iV" secondAttribute="bottom" constant="30" id="IE7-9U-yfN"/>
+                            <constraint firstItem="p9c-F7-fYI" firstAttribute="top" secondItem="9W3-ib-GVJ" secondAttribute="bottom" constant="20" id="Iiu-xT-6zw"/>
                             <constraint firstItem="cDF-kd-72O" firstAttribute="top" secondItem="p9c-F7-fYI" secondAttribute="bottom" constant="15" id="JeV-SD-e8y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E8z-in-sIC" secondAttribute="trailing" constant="50" id="NWU-OH-Sma"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cDF-kd-72O" secondAttribute="trailing" constant="50" id="VA5-BW-5vX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9W3-ib-GVJ" secondAttribute="trailing" constant="50" id="WRc-ZD-g9o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cDF-kd-72O" secondAttribute="bottom" constant="40" id="Y5N-T0-Zdh"/>
+                            <constraint firstItem="9W3-ib-GVJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cTb-sk-qud"/>
                             <constraint firstItem="p9c-F7-fYI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="g9x-3U-Sez"/>
                             <constraint firstItem="E8z-in-sIC" firstAttribute="top" secondItem="Ite-5I-sCW" secondAttribute="bottom" constant="50" id="jPB-LE-4ZD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ite-5I-sCW" secondAttribute="trailing" constant="50" id="kXl-WP-JPk"/>
@@ -99,6 +112,7 @@
                     <navigationItem key="navigationItem" title="LNKeyBoardManager" id="Sm6-1b-QCE"/>
                     <connections>
                         <outlet property="downField" destination="cDF-kd-72O" id="50f-a6-B1v"/>
+                        <outlet property="middleTextField" destination="9W3-ib-GVJ" id="wyp-Vx-ilP"/>
                         <outlet property="textView" destination="p9c-F7-fYI" id="Ah2-BE-uFW"/>
                         <outlet property="upField" destination="E8z-in-sIC" id="fDH-If-ata"/>
                     </connections>

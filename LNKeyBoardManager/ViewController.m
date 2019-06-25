@@ -10,6 +10,9 @@
 #import "LNKeyBoardSender.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *upField;
+
+@property (weak, nonatomic) IBOutlet UITextField *middleTextField;
+
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UITextField *downField;
 
@@ -22,6 +25,9 @@
  
     self.upField.LN_MoveView = self.view;
     self.upField.LN_KeyBoardDistance = 50;
+    
+    self.middleTextField.LN_MoveView = self.view;
+    self.middleTextField.LN_KeyBoardDistance = 50;
     
     self.downField.LN_MoveView = self.view;
     self.downField.LN_KeyBoardDistance = 15;
